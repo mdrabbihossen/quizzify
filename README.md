@@ -1,16 +1,29 @@
-# quizzify
+# Quizzify
 
-A new Flutter project.
+Quizzify is a quiz app. It has different quizzes and also lifeline and you can also win money
+similarly like quiz app. It has following pages -
 
-## Getting Started
+--> Home Page
 
-This project is a starting point for a Flutter application.
+--> Profile Page
 
-A few resources to get you started if this is your first Flutter project:
+--> Quiz Introduction Page
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+--> Question Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+--> Winning Screen
+
+--> Looser Screen
+
+--> Cheque Giving Screen
+
+--> About Developer Page
+
+--> How To Use Page
+
+--> Audience Poll Screen
+
+--> 50:50 Lifeline Screen
+
+--> Ask The Expert Screen
+
