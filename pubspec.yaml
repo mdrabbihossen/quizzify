@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   http: ^1.0.0
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -75,18 +76,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-fonts:
-  - family: quick
-    fonts:
-      - asset: assets/fonts/quick.ttf
-#         - asset: fonts/Schyler-Italic.ttf
-#           style: italic
-  - family: quick bold
-    fonts:
-      - asset: assets/fonts/quick_bold.ttf
-  - family: quick semi
-    fonts:
-      - asset: assets/fonts/quick_semi.ttf
+#fonts:
+#  - family: quick
+#    fonts:
+#      - asset: assets/fonts/quick.ttf
+##         - asset: fonts/Schyler-Italic.ttf
+##           style: italic
+#  - family: quick_bold
+#    fonts:
+#      - asset: assets/fonts/quick_bold.ttf
+#  - family: quick_semi
+#    fonts:
+#      - asset: assets/fonts/quick_semi.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
