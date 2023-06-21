@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:quizzify/utils/assets.dart';
 import 'package:quizzify/utils/colors.dart';
 import 'package:quizzify/utils/text_styles.dart';
+import 'package:quizzify/views/quiz/quiz_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -76,7 +77,14 @@ class HomeScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const QuizScreen(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
                     shape: RoundedRectangleBorder(
