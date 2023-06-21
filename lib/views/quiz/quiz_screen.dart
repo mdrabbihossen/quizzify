@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quizzify/controller/quiz_controller.dart';
+import 'package:quizzify/utils/assets.dart';
 import 'package:quizzify/utils/colors.dart';
 import 'package:quizzify/utils/text_styles.dart';
 
@@ -86,7 +87,6 @@ class _QuizScreenState extends State<QuizScreen> {
                           valueColor: const AlwaysStoppedAnimation<Color>(
                             Colors.white,
                           ),
-                          backgroundColor: AppColors.lightGrey,
                         ),
                       )
                     ],
@@ -116,7 +116,69 @@ class _QuizScreenState extends State<QuizScreen> {
                     ),
                   ),
                 ],
-              )
+              ),
+              const SizedBox(height: 20),
+              Image.asset(
+                AppAssets.ideas,
+                width: size.width * 0.5,
+              ),
+              const SizedBox(height: 25),
+              // questions
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Question ${controller.currentQueIndex + 1} of 40",
+                  style: AppStyles.textStyle(
+                    color: AppColors.lightGrey,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                "What is Rabby's Wife Name?",
+                style: AppStyles.textStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 20),
+              // options
+              Expanded(
+                child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          minimumSize: Size(
+                            size.width - 100,
+                            size.height / 15,
+                          ),
+                          backgroundColor: Colors.white,
+                        ),
+                        child: Text(
+                          "Hasina",
+                          style: AppStyles.textStyle(
+                            color: AppColors.blue,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),

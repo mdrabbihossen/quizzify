@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 
 class QuizController extends ChangeNotifier {
   int _seconds = 60;
+  final int _currentQueIndex = 0;
   late final Timer? _timer;
 
+
   int get seconds => _seconds;
+  int get currentQueIndex => _currentQueIndex;
 
   Timer get timer => _timer!;
 
