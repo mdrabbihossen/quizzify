@@ -1,20 +1,17 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
-import 'package:quizzify/utils/const.dart';
+import 'package:quizzify/models/que_model.dart';
 
 class ApiServices {
   Future getQuestions() async {
+
+
     try {
-      var response = await http.get(Uri.parse(apiURL), headers: {
-        HttpHeaders.contentTypeHeader: "application/json",
-      });
+      final response = await http.get(Uri.parse("https://opentdb.com/api.php?amount=10"));
+
       if (response.statusCode == 200) {
-        var data = jsonDecode(response.body);
-        return data;
+        return questionModelFromJson(response.body);
       } else {
         Fluttertoast.showToast(
           msg: "Data not found",
