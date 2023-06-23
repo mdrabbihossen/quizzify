@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quizzify/controller/quiz_controller.dart';
-import 'package:quizzify/services/api_services.dart';
 import 'package:quizzify/utils/assets.dart';
 import 'package:quizzify/utils/colors.dart';
 import 'package:quizzify/utils/text_styles.dart';
@@ -187,7 +186,6 @@ class _QuizScreenState extends State<QuizScreen> {
                                   Future.delayed(const Duration(seconds: 3),
                                       () {
                                     controller.nextQuestion();
-                                    controller.resetColor();
                                   });
                                 }
                               },
